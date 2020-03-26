@@ -16,29 +16,29 @@
     "lint"
   ],
   "engines": {
-    "node": "~12.16.0",
-    "npm": "~6.13.4"
+    "node": "~12.16.3",
+    "npm": "~6.14.3"
   },
   "keywords": [],
   "author": "Chris Cheshire",
   "license": "ISC",
   "dependencies": {
-    "@envage/defra-identity-hapi-plugin": "git+https://github.com/DEFRA/defra-identity-hapi-plugin.git#pre-release",
+    "@envage/defra-identity-hapi-plugin": "DEFRA/defra-identity-hapi-plugin.git#pre-release",
     "@hapi/basic": "^6.0.0",
     "@hapi/hapi": "^19.1.1",
     "@hapi/inert": "^6.0.1",
     "@hapi/vision": "^6.0.0",
-    "@hapi/yar": "^10.0.0",
-    "applicationinsights": "^1.7.3",
+    "@hapi/yar": "^10.1.0",
+    "applicationinsights": "^1.7.5",
     "applicationinsights-native-metrics": "0.0.5",
-    "blipp": "^3.0.0",
+    "blipp": "^4.0.1",
     "catbox-mongodb": "^4.2.1",
-    "dotenv": "^5.0.1",
-    "ejs": "^2.5.7",
-    "eslint": "^6.4.0",
     "got": "^10.7.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "eslint": "^6.8.0",
     "pre-commit": "^1.2.2",
-    "standard": "^14.3.1",
+    "standard": "^14.3.3",
     "winston": "^3.2.1",
     "winston-azure-application-insights": "^2.0.0"
   }
