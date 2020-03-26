@@ -49,5 +49,15 @@ module.exports = [
     handler: (request, h) => {
       return h.response(version).type('text/plain')
     }
+  },
+  {
+    method: 'GET',
+    path: '/robots933456.txt',
+    config: {
+      auth: false
+    },
+    handler: (request, h) => {
+      return h.response(version).type('text/plain')
+    }
   }
 ]
