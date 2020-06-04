@@ -2,7 +2,7 @@ const serviceLookup = require('../lib/services')
 const connectionRoleIds = require('../lib/connectionRoleIds')
 const readAccounts = require('../lib/readAccounts')
 
-const maxRecords = 50
+const { maxRecords } = require('../config')
 
 module.exports = [
   {
