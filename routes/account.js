@@ -2,6 +2,8 @@ const serviceLookup = require('../lib/services')
 const connectionRoleIds = require('../lib/connectionRoleIds')
 const readAccounts = require('../lib/readAccounts')
 
+const maxRecords = 50
+
 module.exports = [
   {
     method: 'GET',
@@ -22,7 +24,7 @@ module.exports = [
       // read the connections for the current contact
       const rawConnections = await idm.dynamics.readContactsAccountLinks(contactId)
       // read the enrolments for the current contact within this service
-      const currentEnrolments = await idm.dynamics.readEnrolment(contactId, null, null, null, serviceId, true)
+      const currentEnrolments = await idm.dynamics.readEnrolment(contactId, null, null, null, serviceId, true, maxRecords)
       const rawEnrolments = currentEnrolments.value || []
       // convert the enrolments into the data structure required by the data rows in the view
       const enrolments = rawEnrolments.map((thisEnrolment) => {
@@ -37,7 +39,7 @@ module.exports = [
       })
       // read the accounts associated with the connections
       const accountIds = rawConnections.map(conn => conn.accountId)
-      const accounts = await readAccounts(accountIds, request.server)
+      const accounts = await readAccounts(accountIds, request.server, maxRecords)
       const accountNameFromId = accounts.reduce((acc, a) => ({ ...acc, [a.accountId]: a.accountName }), {})
       Object.assign(accountNameFromId, { null: 'Citizen' }) // Add a key for "null" which returns "Citizen"
       const services = []
