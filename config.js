@@ -44,6 +44,5 @@ module.exports = {
   basicAuth: {
     username: env.BASIC_USERNAME,
     password: env.BASIC_PASSWORD
-  },
-  maxRecords: env.MAX_RECORDS
+  }
 }
