@@ -1,0 +1,19 @@
+{
+  "name": "defra-identity-app-scp-stub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "lab -v"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/code": "^8.0.2",
+    "@hapi/lab": "^24.1.0",
+    "md5": "^2.3.0",
+    "oidc-provider": "^6.29.8",
+    "testdouble": "^3.16.1"
+  }
+}

@@ -7,6 +7,7 @@ const vision = require('@hapi/vision')
 const ejs = require('ejs')
 const catboxMongo = require('catbox-mongodb')
 const debug = require('debug')('defra.identity:demo:server')
+const scpStub = require('defra-identity-app-scp-stub')
 const defraIdentityHapiPlugin = require('@envage/defra-identity-hapi-plugin')
 // const defraIdentityHapiPlugin = require('../defra-identity-hapi-plugin')
 
@@ -160,7 +161,14 @@ async function start () {
   })
   /** End auth plugin registration **/
 
-  const staticFilePath = '/{param*}'
+  await server.register({
+    plugin: scpStub,
+    options: {
+      config
+    }
+  })
+
+  const staticFilePath = '/public/{param*}'
 
   // Refresh our token if it has expired
   server.ext('onPreAuth', async (request, h) => {

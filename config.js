@@ -44,5 +44,12 @@ module.exports = {
   basicAuth: {
     username: env.BASIC_USERNAME,
     password: env.BASIC_PASSWORD
+  },
+  scpStub: {
+    enableScpStub: env.ENABLE_SCP_STUB === 'true',
+    stubPrefix: '/scp-stub',
+    redirectUri: `https://${env.SCP_STUB_B2C_TENANTNAME}.b2clogin.com/${env.SCP_STUB_B2C_TENANTID}/oauth2/authresp`,
+    clientId: env.ENABLE_SCP_STUB === 'true' ? env.SCP_STUB_CLIENTID : undefined, // Ignore this value even if passed if stub is not enabled
+    clientSecret: env.ENABLE_SCP_STUB === 'true' ? env.SCP_STUB_CLIENTSECRET : undefined // Ignore this value even if passed if stub is not enabled
   }
 }

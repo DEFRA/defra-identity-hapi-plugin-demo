@@ -1,7 +1,10 @@
 # Change log
 
 All notable changes to this project will be documented in this file.
-## 1.1.3 - 12 Aug - 2020
+## 1.2.0 - 8 Dec 2020
+- CIDM-1896 - Move scp stub module into switch demo service
+
+## 1.1.3 - 12 Aug 2020
 - Add extra debug statements for errors
 
 ## 1.1.2 - 17 Jul 2020
