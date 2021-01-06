@@ -19,6 +19,7 @@ module.exports = (options) => {
       path: `${prefix}/{any*}`,
       method: '*',
       config: {
+        auth: false,
         payload: {
           output: 'stream',
           parse: false
