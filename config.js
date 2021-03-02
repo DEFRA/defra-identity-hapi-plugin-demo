@@ -51,5 +51,10 @@ module.exports = {
     redirectUri: `https://${env.SCP_STUB_B2C_TENANTNAME}.b2clogin.com/${env.SCP_STUB_B2C_TENANTID}/oauth2/authresp`,
     clientId: env.ENABLE_SCP_STUB === 'true' ? env.SCP_STUB_CLIENTID : undefined, // Ignore this value even if passed if stub is not enabled
     clientSecret: env.ENABLE_SCP_STUB === 'true' ? env.SCP_STUB_CLIENTSECRET : undefined // Ignore this value even if passed if stub is not enabled
+  },
+  applicationInsights: {
+    enabled: env.APPINSIGHTS_ENABLED === 'true',
+    instrumentationKey: env.APPINSIGHTS_INSTRUMENTATIONKEY,
+    roleName: env.APPINSIGHTS_ROLENAME
   }
 }

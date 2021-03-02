@@ -1,6 +1,6 @@
 {
   "name": "defra.identity-hapi-plugin-demo",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A demo application for DEFRA's hapi auth plugin",
   "repository": {
     "type": "git",
@@ -29,14 +29,15 @@
     "@hapi/inert": "^6.0.1",
     "@hapi/vision": "^6.0.0",
     "@hapi/yar": "^10.0.0",
+    "applicationinsights": "^1.8.10",
     "blipp": "^3.0.0",
     "catbox-mongodb": "^4.2.1",
     "debug": "^4.1.1",
+    "defra-identity-app-scp-stub": "file:modules/defra-identity-app-scp-stub",
     "dotenv": "^5.0.1",
     "ejs": "^2.5.7",
     "eslint": "^6.4.0",
     "pre-commit": "^1.2.2",
-    "standard": "^14.3.1",
-    "defra-identity-app-scp-stub": "file:modules/defra-identity-app-scp-stub"
+    "standard": "^14.3.1"
   }
 }
